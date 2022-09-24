@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <title>Register Form</title>
+        <style>
+            body{
+                height: 110%;
+	            width: 100%;
+	            background-image:  url(background3.jpg);
+	            background-position: center;
+	            background-size: cover;
+	            position: absolute;
+            }
+            button{
+                width: 85%;
+	            padding: 10px 30px;
+	            cursor: pointer;
+	            display: block;
+	            margin: auto;
+	            background: #d79c0771;
+	            border: 0;
+	            outline: none;
+	            border-radius: 30px;
+            }
+            label{
+                font-size: 20px;
+            }
+            form{
+                border: 3px rgba(1, 15, 42, 0.74);
+            }
+            input[type=email],input[type=text]{
+                width: 50%;
+                margin: 8px 0px;
+                padding: 12px 20px;
+                border-left: 0;
+	            border-top: 0;
+	            border-right: 0;
+	            border-bottom: 1px solid #999;
+	            outline: none;
+	            background: transparent;
+                
+            }
+            input[type=radio]{
+                height: 18px;
+                width: 18px;
+            }
+            button:hover{
+                opacity:0.7;
+
+            }
+            .container{
+                width: 380px;
+	            height: 480px;
+	            position: relative;
+	            margin: 2% auto;
+	            background: rgba(1, 15, 42, 0.74);
+	            padding: 10px;
+	            overflow: hidden;
+
+            }
+        </style>
+    </head>
+    <body>
+        <center><h1>Register From</h1></center>
+        <form action="#" method="post">
+            {% csrf_token %}
+            {% load static %}
+            <center><div class="container">
+                <div class="imgcontainer">
+                    
+                </div>
+                <label for='First_Name'><b>First Name : </b></label>
+		        <input type='text' placeholder="Enter your First Name" name='First_Name' required><br>
+		        <label for='Last_name'><b>Last Name :</b></label>
+		        <input type='text' placeholder='Enter your Last name' name='Last_name' required><br>
+		        <label for ='Email_id'><b>Email Id :  </b></label>
+            	<input type="email" placeholder="Enter Email_id" name="Email_id" float="right"  required><br>  
+            	<label for='password'><b>Password : </b></label>
+            	<input type="text" placeholder="Enter Password" name="password" required><br>
+                <label for='con_pass'><b>con_pass: </b></label>
+            	<input type="text" placeholder="Enter password" name="confirm_password" required><br>
+                <button type="submit"><b>Signup</b></button><br>     
+            	Already an accounct <a href="http://localhost:8000/login/"> Login </a>
+            </div></center>
+        </form>
+    </body>
+</html>
